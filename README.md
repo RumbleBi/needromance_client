@@ -38,7 +38,7 @@
 
 - API 요청에 따른 로딩 구현
   - ##### 데스크탑
-    ![채팅페이지 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/8b041301-4193-4413-a5a0-c1365b2c0052)
+    ![채팅페이지 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/5fefb0da-dc85-4dd6-8201-82eef37dc405)
   - ##### 모바일
     ![채팅페이지 모바일](https://github.com/code-bootcamp/needromance_client/assets/85114315/19ea797d-30e3-4494-a7e6-bc2fa571ec82)
 
