@@ -45,130 +45,130 @@ export default function AdminUI({
 }: IAdminProps) {
   const router = useRouter();
 
-  const userColumns: ColumnsType<AllUsers> = [
-    {
-      title: "닉네임",
-      dataIndex: "nickname",
-      key: uuidv4(),
-    },
-    {
-      title: "포인트",
-      dataIndex: "point",
-      key: uuidv4(),
-    },
-    {
-      title: "이메일",
-      dataIndex: "email",
-      key: uuidv4(),
-    },
-    {
-      title: "가입일",
-      dataIndex: "createdAt",
-      key: uuidv4(),
-      render: (el) => <span>{el.split("T")[0]}</span>,
-    },
-    {
-      title: "상태",
-      dataIndex: "state",
-      key: uuidv4(),
-      render: (el) => (
-        <>
-          {el === true ? (
-            <CheckCircleOutlined style={{ color: "green" }} />
-          ) : (
-            <CloseCircleOutlined style={{ color: "red" }} />
-          )}
-        </>
-      ),
-    },
-    {
-      title: "관리",
-      dataIndex: "id",
-      key: uuidv4(),
-      render: (el) => (
-        <div
-          id={el}
-          onClick={(e) => {
-            setGetBanId(e.currentTarget.id);
-          }}
-        >
-          {el === getBanId && (
-            <CustomModal
-              openModal={openModal}
-              text="유저의 계정상태를 관리할 수 있습니다."
-              ok="변경하기"
-              cancel="취소"
-              onClickOk={handleUserState}
-              onClickCancel={() => setOpenModal(false)}
-            />
-          )}
-          <SettingOutlined
-            style={{ cursor: "pointer" }}
-            onClick={() => setOpenModal(true)}
-          />
-        </div>
-      ),
-    },
-  ];
-  const boardColumns: ColumnsType<AllBoards> = [
-    {
-      title: "닉네임",
-      dataIndex: "user_nickname",
-      key: uuidv4(),
-    },
-    {
-      title: "제목",
-      dataIndex: "board_title",
-      key: uuidv4(),
-    },
-    {
-      title: "작성일",
-      dataIndex: "board_createdAt",
-      key: uuidv4(),
-      render: (el) => <span>{el.split("T")[0]}</span>,
-    },
-    {
-      title: "이동",
-      dataIndex: "board_id",
-      key: uuidv4(),
-      render: (el) => (
-        <ProfileOutlined
-          id={el}
-          onClick={() => {
-            router.push(`/boards/${el}`);
-          }}
-        />
-      ),
-    },
-    {
-      title: "관리",
-      dataIndex: "board_id",
-      key: uuidv4(),
-      render: (el) => (
-        <div
-          id={el}
-          onClick={(e) => {
-            setGetDeleteId(e.currentTarget.id);
-          }}
-        >
-          {el === Number(getDeleteId) && (
-            <CustomModal
-              openModal={openModal}
-              text="게시글을 삭제하시겠습니까?"
-              ok="삭제하기"
-              cancel="취소"
-              onClickOk={handleBoardDelete}
-              onClickCancel={() => setOpenModal(false)}
-            />
-          )}
-          <DeleteOutlined
-            style={{ cursor: "pointer" }}
-            onClick={() => setOpenModal(true)}
-          />
-        </div>
-      ),
-    },
-  ];
+  // const userColumns: ColumnsType<AllUsers> = [
+  //   {
+  //     title: "닉네임",
+  //     dataIndex: "nickname",
+  //     key: uuidv4(),
+  //   },
+  //   {
+  //     title: "포인트",
+  //     dataIndex: "point",
+  //     key: uuidv4(),
+  //   },
+  //   {
+  //     title: "이메일",
+  //     dataIndex: "email",
+  //     key: uuidv4(),
+  //   },
+  //   {
+  //     title: "가입일",
+  //     dataIndex: "createdAt",
+  //     key: uuidv4(),
+  //     render: (el) => <span>{el.split("T")[0]}</span>,
+  //   },
+  //   {
+  //     title: "상태",
+  //     dataIndex: "state",
+  //     key: uuidv4(),
+  //     render: (el) => (
+  //       <>
+  //         {el === true ? (
+  //           <CheckCircleOutlined style={{ color: "green" }} />
+  //         ) : (
+  //           <CloseCircleOutlined style={{ color: "red" }} />
+  //         )}
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "관리",
+  //     dataIndex: "id",
+  //     key: uuidv4(),
+  //     render: (el) => (
+  //       <div
+  //         id={el}
+  //         onClick={(e) => {
+  //           setGetBanId(e.currentTarget.id);
+  //         }}
+  //       >
+  //         {el === getBanId && (
+  //           <CustomModal
+  //             openModal={openModal}
+  //             text="유저의 계정상태를 관리할 수 있습니다."
+  //             ok="변경하기"
+  //             cancel="취소"
+  //             onClickOk={handleUserState}
+  //             onClickCancel={() => setOpenModal(false)}
+  //           />
+  //         )}
+  //         <SettingOutlined
+  //           style={{ cursor: "pointer" }}
+  //           onClick={() => setOpenModal(true)}
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  // ];
+  // const boardColumns: ColumnsType<AllBoards> = [
+  //   {
+  //     title: "닉네임",
+  //     dataIndex: "user_nickname",
+  //     key: uuidv4(),
+  //   },
+  //   {
+  //     title: "제목",
+  //     dataIndex: "board_title",
+  //     key: uuidv4(),
+  //   },
+  //   {
+  //     title: "작성일",
+  //     dataIndex: "board_createdAt",
+  //     key: uuidv4(),
+  //     render: (el) => <span>{el.split("T")[0]}</span>,
+  //   },
+  //   {
+  //     title: "이동",
+  //     dataIndex: "board_id",
+  //     key: uuidv4(),
+  //     render: (el) => (
+  //       <ProfileOutlined
+  //         id={el}
+  //         onClick={() => {
+  //           router.push(`/boards/${el}`);
+  //         }}
+  //       />
+  //     ),
+  //   },
+  //   {
+  //     title: "관리",
+  //     dataIndex: "board_id",
+  //     key: uuidv4(),
+  //     render: (el) => (
+  //       <div
+  //         id={el}
+  //         onClick={(e) => {
+  //           setGetDeleteId(e.currentTarget.id);
+  //         }}
+  //       >
+  //         {el === Number(getDeleteId) && (
+  //           <CustomModal
+  //             openModal={openModal}
+  //             text="게시글을 삭제하시겠습니까?"
+  //             ok="삭제하기"
+  //             cancel="취소"
+  //             onClickOk={handleBoardDelete}
+  //             onClickCancel={() => setOpenModal(false)}
+  //           />
+  //         )}
+  //         <DeleteOutlined
+  //           style={{ cursor: "pointer" }}
+  //           onClick={() => setOpenModal(true)}
+  //         />
+  //       </div>
+  //     ),
+  //   },
+  // ];
 
   return (
     <S.Wrapper>
@@ -214,14 +214,14 @@ export default function AdminUI({
               </S.SearchFilterBox>
             </S.TableSearchBox>
             {/* table */}
-            <Table
+            {/* <Table
               columns={userColumns}
               dataSource={allUsers}
               size="small"
               scroll={{ x: "max-content", y: "max-content" }}
               key={uuidv4()}
               rowKey={uuidv4()}
-            />
+            /> */}
           </S.TableUserWrapper>
         )}
         {pageTabs === 1 && (
@@ -248,14 +248,14 @@ export default function AdminUI({
               </S.SearchFilterBox>
             </S.TableSearchBox>
             {/* table */}
-            <Table
+            {/* <Table
               columns={boardColumns}
               dataSource={allBoards}
               size="small"
               scroll={{ x: "max-content", y: "max-content" }}
               key={uuidv4()}
               rowKey={uuidv4()}
-            />
+            /> */}
           </S.TableBoardWrapper>
         )}
       </S.TableWrapper>

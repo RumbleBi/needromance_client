@@ -15,12 +15,12 @@ interface IDeleteBoardData {
   accessToken: string;
 }
 
-export const getAllUsers = async (accessToken: string): Promise<AllUsers[]> => {
+export const getAllUsers = async (accessToken: string): Promise<AllUsers> => {
   try {
-    const response = await api.get("/admin/users", {
+    const response = await api.get("/admin/users?page=1", {
       headers: { Authorization: "Bearer " + accessToken },
     });
-
+    console.log(response.data);
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -38,7 +38,7 @@ export const getAllUsers = async (accessToken: string): Promise<AllUsers[]> => {
 
 export const getSearchUser = async (
   data: ISearchInputData
-): Promise<AllUsers[]> => {
+): Promise<AllUsers> => {
   const { keyword, accessToken } = data;
   try {
     const response = await api.get(
@@ -47,6 +47,7 @@ export const getSearchUser = async (
         headers: { Authorization: `Bearer ${accessToken}` },
       }
     );
+    console.log(response.data);
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -73,7 +74,7 @@ export const patchUserState = async (data: IBanData): Promise<AllUsers> => {
         headers: { Authorization: `Bearer ${accessToken}` },
       }
     );
-
+    console.log(response.data);
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -89,15 +90,13 @@ export const patchUserState = async (data: IBanData): Promise<AllUsers> => {
   }
 };
 
-export const getAllBoards = async (
-  accessToken: string
-): Promise<AllBoards[]> => {
+export const getAllBoards = async (accessToken: string): Promise<AllBoards> => {
   try {
-    const response = await api.get("/admin/boards", {
+    const response = await api.get("/admin/boards?page=1", {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
-
-    return response.data;
+    console.log(response.data);
+    return response.data.boards;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       const { response } = error;
@@ -114,7 +113,7 @@ export const getAllBoards = async (
 
 export const getSearchBoard = async (
   data: ISearchInputData
-): Promise<AllBoards[]> => {
+): Promise<AllBoards> => {
   const { keyword, accessToken } = data;
   try {
     const response = await api.get(

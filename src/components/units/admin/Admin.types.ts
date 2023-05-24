@@ -5,8 +5,8 @@ export interface IAdminProps {
   browserWidth: number;
   openTabs: boolean;
   openModal: boolean;
-  allUsers: AllUsers[];
-  allBoards: AllBoards[];
+  allUsers: Users[];
+  allBoards: Boards[];
   keyword: { user: string; board: string };
   setPageTabs: Dispatch<SetStateAction<number>>;
   setOpenModal: Dispatch<SetStateAction<boolean>>;
@@ -25,8 +25,16 @@ export interface IAdminProps {
   handleClearInput: () => void;
   submitKeyPressBoardSearch: (e: KeyboardEvent<HTMLInputElement>) => void;
   submitKeyPressUserSearch: (e: KeyboardEvent<HTMLInputElement>) => void;
+  allUsersCounts: number;
+  allBoardsCounts: number;
 }
+
 export interface AllUsers {
+  users: Users[];
+  counts: number;
+}
+
+export interface Users {
   createdAt: string;
   email: string;
   id: string;
@@ -36,13 +44,30 @@ export interface AllUsers {
   userImg: string | null;
   userRanking: string;
 }
-export interface AllBoards {
-  board_id: number;
-  board_title: string;
-  board_createdAt: string;
-  user_id: string;
-  user_nickname: string;
+
+export interface AllUsersCounts {
+  counts: number;
 }
+
+export interface AllBoards {
+  boards: Boards[];
+  counts: number;
+}
+
+export interface Boards {
+  createdAt: string;
+  id: number;
+  title: string;
+  user: {
+    id: string;
+    nickname: string;
+  };
+}
+
+export interface AllBoardsCounts {
+  counts: number;
+}
+
 export interface userProfile {
   id: string;
   email: string;
