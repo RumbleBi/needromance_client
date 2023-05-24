@@ -24,8 +24,9 @@ const InfoLeft = styled.div`
 const InfoRight = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  align-items: flex-end;
   font-size: 1.2rem;
+  width: 200px;
 `;
 
 const GitBtn = styled.a`

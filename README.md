@@ -14,9 +14,9 @@
 
 **포지션** : `front-end`
 
-**역할** : `Leader` `front deploy`
+**역할** : `Project Leader` `Front Deploy`
 
-**사용기술** : `next.js` `Typescript` `AWS EC2` `emotion.js` `REST-API & axios` `Recoil` `git` `Antd` `eslint`
+**사용기술** : `next.js` `Typescript` `AWS EC2` `emotion.js` `axios` `Recoil` `git` `Antd` `eslint`
 
 ---
 
@@ -27,22 +27,39 @@
 - fade-in, out 방식의 이미지 슬라이더 구현
 
 - 프로젝트 홈페이지의 강조하고 싶은 부분은 스크롤을 내리다가 브라우저 창에 보이게 요소가 보이게 되면 애니메이션이 작동하도록 구현
+  - ##### 데스크탑
+    ![메인페이지 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/981a1636-c17e-46c8-9f92-f259e82def20)
+  - ##### 모바일
+    ![메인페이지 모바일](https://github.com/code-bootcamp/needromance_client/assets/85114315/4ed7f0bf-2f6e-48ee-ae2b-6e62c54dead2)
 
 #### 2. chat-GPT 채팅페이지
 
 - 카카오톡과 같은 채팅 UI 기능 구현
 
 - API 요청에 따른 로딩 구현
+  - ##### 데스크탑
+    ![채팅페이지 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/8b041301-4193-4413-a5a0-c1365b2c0052)
+  - ##### 모바일
+    ![채팅페이지 모바일](https://github.com/code-bootcamp/needromance_client/assets/85114315/19ea797d-30e3-4494-a7e6-bc2fa571ec82)
 
 #### 3. 관리자 페이지
 
 - Antd를 활용하여 table 형태의 유저, 게시글 관리 페이지네이션 구현
+- 사용자 UX, UI를 고려하여 검색 Input 초기화시 유저리스트 refetch, keyPress, clearButton 적용
+- 유저 ban 기능을 구현하여 악성유저에 관한 제재 조치 구현
 
-- 유저 ban 기능을 구현하여 악성유저에 관한 제재 조치
+  - ##### 데스크탑
+    ![유저관리 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/a0cac0f0-7c81-44e1-bcd9-c7bc7e452c21)
+  - ##### 모바일
+    ![유저관리 모바일](https://github.com/code-bootcamp/needromance_client/assets/85114315/ad2c0db0-f9a8-4176-ad11-83ba728db0c3)
 
 - 게시글의 광고, 음란, 도배 등 사이트 운영정책에 위반하는 게시글 삭제 기능 구현
 
-- 사용자 UX, UI를 고려하여 검색 Input 초기화시 유저리스트 refetch, keyPress, clearButton 적용
+  - ##### 데스크탑
+    ![게시글관리 데스크탑](https://github.com/code-bootcamp/needromance_client/assets/85114315/e779aef7-bb27-4914-a8a6-9c1ac285f3ad)
+  - ##### 모바일
+
+    ![게시글관리 모바일](https://github.com/code-bootcamp/needromance_client/assets/85114315/0fa9280a-6d3a-4ed4-9b5d-e41e6bebed8c)
 
 #### 4. 공통 컴포넌트, axios default, globalstyle, 반응형 디자인 구현, eslint & TOASTUI 코드 컨벤션 적용
 
