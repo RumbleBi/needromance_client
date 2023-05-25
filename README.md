@@ -23,6 +23,7 @@
 
 ## Git-flow Branch
 https://techblog.woowahan.com/2553/
+</ br>
 로맨스가 필요해 프로젝트의 브랜치 관리는 우아한 형제들의 깃 브랜치 관리를 벤치마킹하여 관리하였습니다.
 
 브랜치 관리에 있어 간략하게 feature - develop - master 브랜치를 구성하였습니다. 또한 각자 원본 레포지토리에서 fork 하여 Issue, Milestone를 생성하여 각자 팀원들이 어떤 작업을 했는지 추적하고, 관리할 수 있도록 구성하였습니다.
