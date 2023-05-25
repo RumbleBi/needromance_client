@@ -6,6 +6,31 @@
 
 ---
 
+## 기획의도
+1. 연애에 대한 고민은 어디서 해결하지?
+  - 연애생활이 지치고 힘들때, 누군가에게 내 고민을 들어줄 사람이 없다면? 이라는 아이디어를 시작으로 연인들의 고민상담을 들어줄 chat-GPT, 커뮤니티를 통해 각자 유저들간의 고민을 공유하고 상담할 수 있도록 하는 프로젝트를 구상하였습니다.
+2. 연애에 대해 전문적으로 상담해주는 사이트는 없다?!
+  - 이번 프로젝트를 기획하면서 시장조사겸, 아이디어 벤치마크를 위해 연애상담 사이트를 검색해 보았습니다. 하지만, 대부분의 상담 서비스는 유료이거나 비회원은 비공개로 되어있어 접근성이 불편했습니다. 그래서 유저들에게 접근성이 유연하고, 연애상담에 대한 전문성을 갖출 수 있도록 chat-GPT 기술을 활용하여 심리상담 및 연애에 대한 고민을 해결할 수 있도록 노력하였습니다.
+3. 프로젝트의 양보다 질을 선택하였습니다.
+  - 프로젝트 기능 구성에 있어서 실제 서비스를 런칭하는 것과 같이 최대한 유저들의 입장을 고려하여 진행하게 되었습니다. 로그인은 이메일, google 로그인을 사용하여 빠르게 서비스를 이용할 수 있도록 고려하였고, 기본적인 게시판 기능에 베스트 추천, 상담랭킹 등 유저들의 커뮤니티 활성화를 위해 동기부여가 될 수 있도록 여러 기능들을 고려하여 구현하였습니다. 또한 마이페이지, 관리자 페이지를 구현하여 유저들의 서비스 이용에 편리함을 추구하고 또한 게시판, 유저를 관리할 수 있는 기능을 구현하였습니다.
+
+---
+
+## flow-chart
+
+![flowwork](https://github.com/code-bootcamp/needromance_client/assets/85114315/120562e5-9c07-4d90-9865-95a345bb1331)
+
+
+## Git-flow Branch
+https://techblog.woowahan.com/2553/
+로맨스가 필요해 프로젝트의 브랜치 관리는 우아한 형제들의 깃 브랜치 관리를 벤치마킹하여 관리하였습니다.
+
+브랜치 관리에 있어 간략하게 feature - develop - master 브랜치를 구성하였습니다. 또한 각자 원본 레포지토리에서 fork 하여 Issue, Milestone를 생성하여 각자 팀원들이 어떤 작업을 했는지 추적하고, 관리할 수 있도록 구성하였습니다.
+
+![git-flow_overall_graph](https://github.com/code-bootcamp/needromance_client/assets/85114315/308a16f6-683d-4ad5-9730-56318814df6d)
+
+
+
 ## 배포 사이트: https://needromance.online
 
 ---
@@ -472,3 +497,5 @@ src
 <a href="https://velog.io/@olzlel2000/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D-5-Axios-default-%EC%84%A4%EC%A0%95-CORS-Error">프로젝트 회고록 - 5 Axios default 설정 & CORS Error</a><br />
 <a href="https://velog.io/@olzlel2000/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D-6-%EA%B3%B5%ED%86%B5-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EC%9E%AC%EC%82%AC%EC%9A%A9%EC%97%90-%EA%B4%80%ED%95%9C-%EA%B3%A0%EC%B0%B0">프로젝트 회고록 - 6 공통 컴포넌트의 재사용에 관한 고찰</a><br />
 <!-- <a href="https://velog.io/@olzlel2000/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D-7-%EC%B4%88%EA%B8%B0-%EC%84%A4%EA%B3%84%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A4%91%EC%9A%94%EC%84%B1%EA%B3%BC-%EA%B0%9C%EC%84%A0%ED%95%A0-%EC%A0%90">프로젝트 회고록 - 7 프로젝트 초기 설계에 대한 중요성과 개선할 점</a> -->
+
+발표영상링크 : https://www.youtube.com/watch?v=br-5W_HDFp0&ab_channel=코드캠프
