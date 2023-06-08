@@ -4,6 +4,8 @@
 
 #### 프로젝트 리팩토링 : 2023.05.15 ~ 2023.05.22
 
+#### 배포 사이트: https://needromance.online (비용문제로 현재는 닫았습니다.)
+
 ---
 
 ## 기획의도
@@ -31,9 +33,6 @@ https://techblog.woowahan.com/2553/
 
 ![git-flow_overall_graph](https://github.com/code-bootcamp/needromance_client/assets/85114315/308a16f6-683d-4ad5-9730-56318814df6d)
 
-
-
-## 배포 사이트: https://needromance.online
 
 ---
 
